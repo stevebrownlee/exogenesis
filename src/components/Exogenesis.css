@@ -1,21 +1,27 @@
 /* Import the google web fonts you want to use */
-@import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One");
 
+@import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One");
 /*Typography
 --------------------------------------------------------------*/
+
 body {
   padding: 1rem 2rem;
+  color: #f2f2f2;
+  font-family: "Comfortaa", Arial, sans-serif;
 }
 
-body,
-button,
-input,
-select,
-textarea {
-  color: #404040;
+input, button, select, textarea {
   font-family: "Comfortaa", Arial, sans-serif;
-  font-size: 14px;
+  font-size: 1rem;
   line-height: 1.5;
+  color: #5b5b5b;
+}
+
+button, select, textarea {
+}
+
+select {
+  padding: 0.5rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -35,4 +41,12 @@ strong {
 
 address {
   margin: 0 0 1.5em;
+}
+
+a {
+  color: aqua;
+}
+
+a:visited {
+  color:fuchsia
 }

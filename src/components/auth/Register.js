@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react"
-import { useHistory } from "react-router-dom"
+import { useHistory, Link } from "react-router-dom"
 import { Settings } from "../Settings"
 import "./Login.css"
 
@@ -94,6 +94,10 @@ export const Register = () => {
                     <button type="submit"> Register </button>
                 </fieldset>
             </form>
+
+            <section className="link--register">
+                <Link to="/login">Already have an account?</Link>
+            </section>
         </main>
     )
 }
