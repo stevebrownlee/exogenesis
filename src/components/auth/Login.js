@@ -10,17 +10,24 @@ export const Login = () => {
     const history = useHistory()
 
     const existingUserCheck = () => {
-        return fetch(`${Settings.apiURL}/governors?email=${governor.email}`)
+        return fetch(`${Settings.apiURL}/governors?email=${governor.email}&_expand=colony`)
             .then(res => res.json())
-            .then(user => user.length ? user[0] : false)
+            .then(user => {
+                if (user.length) {
+                    return user[0]
+                }
+                else {
+                    return false
+                }
+            })
     }
 
     const handleLogin = (e) => {
         e.preventDefault()
         existingUserCheck()
-            .then(exists => {
-                if (exists) {
-                    localStorage.setItem("exo_id", exists.id)
+            .then(user => {
+                if (user) {
+                    localStorage.setItem("exo_user", btoa(JSON.stringify(user)))
                     history.push("/")
                 } else {
                     existDialog.current.showModal()

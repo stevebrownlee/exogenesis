@@ -1,11 +1,15 @@
 import React from "react"
 import { Route } from "react-router-dom"
+import { NewsList } from "./news/NewsList";
+import { NewsProvider } from "./news/NewsProvider";
 
 export const ApplicationViews = () => {
     return (
         <>
             <Route exact path="/">
-                <h1>Hello</h1>
+                <NewsProvider>
+                    <NewsList />
+                </NewsProvider>
             </Route>
         </>
     )

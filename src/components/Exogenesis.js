@@ -16,7 +16,7 @@ export const Exogenesis = () => (
                             <NavBar />
                             <ApplicationViews />
                         </>
-                    );
+                    )
                 } else {
                     return <Redirect to="/login" />;
                 }

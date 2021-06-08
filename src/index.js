@@ -7,11 +7,11 @@ import './index.css';
 
 ReactDOM.render(
     <React.StrictMode>
-        <section className="wrapper">
+        {/* <section className="wrapper">
             <div id="stars"></div>
             <div id="stars2"></div>
             <div id="stars3"></div>
-        </section>
+        </section> */}
         <Router>
             <Exogenesis />
         </Router>
